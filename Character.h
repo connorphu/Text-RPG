@@ -20,3 +20,20 @@ public:
 
 	string getName();
 };
+
+class Warrior : public Character {
+public:
+	Warrior(string inputName);
+};
+
+class Wizard : public Character {
+	Wizard(string inputName);
+};
+
+class Marksman : public Character {
+	Marksman(string inputName);
+};
+
+class Rogue : public Character {
+	Rogue(string inputName);
+};

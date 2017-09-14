@@ -11,8 +11,10 @@ public:
 	Character(string inputName);
 
 	string name;
+	int level;
+	int exp;
 	int hp;
-	int atk;
+	int str;
 	int def;
 	int intel;
 	int dex;

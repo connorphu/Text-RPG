@@ -4,4 +4,7 @@
 class Marksman : public Character {
 public:
 	Marksman(string inputName);
+
+	int poisonArrow();
+
 };

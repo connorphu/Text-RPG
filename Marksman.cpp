@@ -2,14 +2,14 @@
 
 Marksman::Marksman(string inputName) : Character(inputName)
 {
-	level = 1;
-	exp = 0;
-	hp = 45;
-	str = 10;
-	def = 5;
-	intel = 5;
-	dex = 25;
-	luk = 5;
+	this->setLevel(1);
+	this->setExp(0);
+	this->setHp(45);
+	this->setStr(10);
+	this->setDef(5);
+	this->setIntel(5);
+	this->setDex(25);
+	this->setLuk(5);
 }
 
 int Marksman::poisonArrow() {

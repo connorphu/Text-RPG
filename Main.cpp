@@ -4,6 +4,8 @@ int main() {
 	Marksman mark("Mark");
 	Marksman mac("Mac");
 	Gameplay::combat(mark, mac);
-	cout << mark.hp << endl;
-	cout << mac.hp << endl;
+	cout << mark.getName() << endl;
+	cout << mark.getHp() << endl;
+	cout << mac.getName() << endl;
+	cout << mac.getHp() << endl;
 }

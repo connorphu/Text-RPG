@@ -2,23 +2,33 @@
 
 void Gameplay::combat(Character& fighter1, Character& fighter2)
 {
-	while (fighter1.hp > 0 && fighter2.hp > 0) {
+	cout << "You encounter " << fighter2.getName() << endl;
+	while (fighter1.getHp() > 0 && fighter2.getHp() > 0) {
 		int choice;
+		cout << "You have " << fighter1.getHp() << endl;
+		cout << fighter2.getName() << " has " << fighter2.getHp() << endl;
 		cout << "1. attack" << endl;
 		cout << "2. abilities" << endl;
-		cout << "3. run" << endl;
+		cout << "3. items" << endl;
+		cout << "4. run" << endl;
 		cin >> choice;
 		switch (choice)
 		{
 		case 1:
-			cout << fighter1.name << " dealt " << fighter1.str - fighter2.def << " damage." << endl;
-			fighter2.hp -= fighter1.str - fighter2.def;
-			cout << fighter2.name << "'s HP is now " << fighter2.hp << "." << endl;
+			cout << "You dealt " << fighter1.getStr() - fighter2.getDef() << " damage." << endl;
+			fighter2.takeDamage(fighter1.getStr() - fighter2.getDef());
+			cout << fighter2.getName() << "'s HP is now " << fighter2.getHp() << "." << endl;
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
 			break;
 		default:
 			break;
 		}
 	}
-	cout << fighter1.hp << endl;
-	cout << fighter2.hp << endl;
+	cout << fighter1.getHp() << endl;
+	cout << fighter2.getHp() << endl;
 }
